@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +97,26 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .bonfire-gradient {
+    background: linear-gradient(135deg, #F97316 0%, #FBBF24 100%);
+  }
+  
+  .flame-animation-wrapper:hover .flame {
+    animation: flame-flicker 2s ease-in-out infinite;
+  }
+  
+  .flame-animation-wrapper:hover .flame-inner {
+    animation: flame-sway 3s ease-in-out infinite;
+  }
+  
+  .flame-animation-wrapper:hover .sparkle {
+    animation: float-up 2s ease-out infinite;
+    animation-delay: calc(var(--delay) * 0.5s);
   }
 }
