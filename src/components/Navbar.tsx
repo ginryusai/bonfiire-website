@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Logo size="md" />
         <nav className="hidden md:flex space-x-8">
-          {['Events', 'Discover', 'About', 'Contact'].map((item) => (
+          {['Home', 'About', 'Contact'].map((item) => (
             <a 
               key={item} 
               href="#" 
@@ -26,12 +26,9 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             </a>
           ))}
         </nav>
-        <div className="flex items-center space-x-4">
-          <button className="px-4 py-2 text-sm rounded-full border border-gray-200 text-gray-600 hover:border-bonfire-orange hover:text-bonfire-orange transition-all duration-300">
-            Sign In
-          </button>
+        <div className="flex items-center">
           <button className="px-4 py-2 text-sm rounded-full bg-gradient-to-r from-bonfire-orange to-bonfire-yellow text-white shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300">
-            Join Now
+            Get the App
           </button>
         </div>
       </div>
