@@ -23,10 +23,25 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-gray-50 relative overflow-hidden">
+      {/* Decorative abstract shapes */}
+      <div className="absolute top-0 right-0 w-full h-full pointer-events-none overflow-hidden">
+        {/* Orange circle */}
+        <div className="absolute top-[10%] right-[5%] w-64 h-64 rounded-full bg-orange-100/30 blur-3xl"></div>
+        
+        {/* Yellow blob */}
+        <div className="absolute top-[60%] left-[10%] w-80 h-80 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] bg-yellow-100/40 blur-2xl"></div>
+        
+        {/* Small orange accent */}
+        <div className="absolute top-[30%] left-[20%] w-20 h-20 rounded-full bg-bonfire-orange/10 blur-xl"></div>
+        
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-transparent to-transparent"></div>
+      </div>
+      
       <Navbar />
       
-      <main className="pt-24">
+      <main className="pt-24 relative z-10">
         {/* Hero section */}
         <section className="relative min-h-[80vh] flex flex-col items-center justify-center px-6 overflow-hidden">
           <div 
@@ -71,7 +86,7 @@ const Index = () => {
         </section>
       </main>
 
-      <footer className="bg-gray-50 border-t border-gray-100 py-12 px-6">
+      <footer className="bg-gray-50 border-t border-gray-100 py-12 px-6 relative z-10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
             <Logo size="sm" />
